@@ -2,8 +2,8 @@ import * as stylex from "@stylexjs/stylex";
 import { useQuery } from "@tanstack/react-query";
 
 import Alert from "@/components/alert";
-import CircularProgress from "@/components/circular-progress";
 import MovieCard from "@/components/movie-card";
+import Spinner from "@/components/spinner";
 import { getPopularMovies } from "@/services/tmdb-service";
 
 export default function PopularMoviesSection() {
@@ -15,7 +15,7 @@ export default function PopularMoviesSection() {
     },
   });
 
-  if (isLoading) return <CircularProgress style={[styles.container]} />;
+  if (isLoading) return <Spinner style={[styles.container]} />;
   if (isError) {
     return (
       <div {...stylex.props(styles.container)}>

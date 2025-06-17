@@ -3,7 +3,7 @@ import * as stylex from "@stylexjs/stylex";
 import { useQuery } from "@tanstack/react-query";
 
 import Alert from "@/components/alert";
-import CircularProgress from "@/components/circular-progress";
+import Spinner from "@/components/spinner";
 import AddIcon from "@/icons/add-icon";
 import { getMovieGenres } from "@/services/tmdb-service";
 
@@ -19,7 +19,7 @@ export default function FavoriteGenresSection({
     queryFn: () => getMovieGenres(),
   });
 
-  if (isLoading) return <CircularProgress style={[styles.container, style]} />;
+  if (isLoading) return <Spinner style={[styles.container, style]} />;
   if (isError) {
     return (
       <div {...stylex.props(styles.container)}>

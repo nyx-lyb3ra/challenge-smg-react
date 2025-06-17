@@ -1,7 +1,7 @@
 import type { StyleXStyles } from "@stylexjs/stylex";
 import * as stylex from "@stylexjs/stylex";
 
-interface CircularProgressProps {
+interface SpinnerProps {
   style?: StyleXStyles;
 }
 
@@ -14,7 +14,7 @@ const spin = stylex.keyframes({
   },
 });
 
-export default function CircularProgress({ style }: CircularProgressProps) {
+export default function Spinner({ style }: SpinnerProps) {
   return (
     <div {...stylex.props(styles.container, style)}>
       <div {...stylex.props(styles.spinner)} />

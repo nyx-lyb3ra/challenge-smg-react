@@ -4,9 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
 import Alert from "@/components/alert";
-import CircularProgress from "@/components/circular-progress";
 import MovieCard from "@/components/movie-card";
 import Select from "@/components/select";
+import Spinner from "@/components/spinner";
 import { getNewTrailers } from "@/services/tmdb-service";
 
 interface NewTrailersSectionProps {
@@ -24,7 +24,7 @@ export default function NewTrailersSection({ style }: NewTrailersSectionProps) {
     },
   });
 
-  if (isLoading) return <CircularProgress style={[styles.container, style]} />;
+  if (isLoading) return <Spinner style={[styles.container, style]} />;
   if (isError) {
     return (
       <div {...stylex.props(styles.container)}>
