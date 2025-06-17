@@ -1,9 +1,9 @@
 import * as stylex from "@stylexjs/stylex";
 import { useQuery } from "@tanstack/react-query";
 
+import CircularProgress from "@/components/circular-progress";
+import MovieCard from "@/components/movie-card";
 import { getPopularMovies } from "@/services/tmdb-service";
-import CircularProgress from "./circular-progress";
-import MovieCard from "./movie-card";
 
 export default function PopularMoviesSection() {
   const { data, isLoading, isError, error } = useQuery({

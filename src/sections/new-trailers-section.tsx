@@ -1,13 +1,13 @@
 import * as Select from "@radix-ui/react-select";
+import type { StyleXStyles } from "@stylexjs/stylex";
 import * as stylex from "@stylexjs/stylex";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
+import CircularProgress from "@/components/circular-progress";
+import MovieCard from "@/components/movie-card";
 import DownArrowIcon from "@/icons/down-arrow-icon";
 import { getNewTrailers } from "@/services/tmdb-service";
-import CircularProgress from "./circular-progress";
-import MovieCard from "./movie-card";
-import type { StyleXStyles } from "@stylexjs/stylex";
 
 interface NewTrailersSectionProps {
   style?: StyleXStyles;

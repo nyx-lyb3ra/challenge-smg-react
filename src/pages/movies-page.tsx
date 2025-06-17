@@ -1,9 +1,9 @@
 import * as stylex from "@stylexjs/stylex";
 
-import ContinueWatchingSection from "@/components/continue-watching-section";
-import FavoriteGenresSection from "@/components/favorite-genres-section";
-import NewTrailersSection from "@/components/new-trailers-section";
-import PopularMoviesSection from "@/components/popular-movies-section";
+import ContinueWatchingSection from "@/sections/continue-watching-section";
+import FavoriteGenresSection from "@/sections/favorite-genres-section";
+import NewTrailersSection from "@/sections/new-trailers-section";
+import PopularMoviesSection from "@/sections/popular-movies-section";
 
 export default function MoviesPage() {
   return (

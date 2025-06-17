@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 
-import MovieCard from "./movie-card";
+import MovieCard from "@/components/movie-card";
 
 export default function ContinueWatchingSection() {
   return (

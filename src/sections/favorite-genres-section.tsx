@@ -2,9 +2,9 @@ import type { StyleXStyles } from "@stylexjs/stylex";
 import * as stylex from "@stylexjs/stylex";
 import { useQuery } from "@tanstack/react-query";
 
-import { getMovieGenres } from "@/services/tmdb-service";
-import CircularProgress from "./circular-progress";
+import CircularProgress from "@/components/circular-progress";
 import AddIcon from "@/icons/add-icon";
+import { getMovieGenres } from "@/services/tmdb-service";
 
 interface FavoriteGenresSectionProps {
   style?: StyleXStyles;
