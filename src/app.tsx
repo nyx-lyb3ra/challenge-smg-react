@@ -1,20 +1,20 @@
 import * as stylex from "@stylexjs/stylex";
 import { Link, Route, Routes } from "react-router";
 
+import Avatar from "./components/avatar";
 import HeaderBar from "./components/header-bar";
 import IconButton from "./components/icon-button";
 import Tab from "./components/tab";
 import Tabs from "./components/tabs";
 import useRouteMatch from "./hooks/use-route-match";
 import AppsIcon from "./icons/apps-icon";
+import DownArrowIcon from "./icons/down-arrow-icon";
 import NotificationsIcon from "./icons/notifications-icon";
 import SearchIcon from "./icons/search-icon";
 import AnimationsPage from "./pages/animations-page";
 import MoviesPage from "./pages/movies-page";
 import PlansPage from "./pages/plans-page";
 import TvShowsPage from "./pages/tv-shows-page";
-import DownArrowIcon from "./icons/down-arrow-icon";
-import Avatar from "./components/avatar";
 
 export default function App() {
   const routeMatch = useRouteMatch(["/", "/tv-shows", "/animations", "/plans"]);

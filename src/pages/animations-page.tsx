@@ -1,12 +1,21 @@
-import { Box, Typography } from "@mui/material";
+import * as stylex from "@stylexjs/stylex";
 
 export default function AnimationsPage() {
   return (
-    <Box sx={{ mt: 4 }}>
-      <Typography variant="h5">Contenido de Animaciones</Typography>
-      <Typography variant="body1" color="text.secondary">
-        ¡Pronto, lo mejor del mundo animado!
-      </Typography>
-    </Box>
+    <div {...stylex.props(styles.container)}>
+      <h2>Contenido de Animaciones</h2>
+      <div>¡Pronto, lo mejor del mundo animado!</div>
+    </div>
   );
 }
+
+const styles = stylex.create({
+  container: {
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+    flexGrow: 1,
+    gap: "1rem",
+    justifyContent: "center",
+  },
+});

@@ -1,12 +1,21 @@
-import { Box, Typography } from "@mui/material";
+import * as stylex from "@stylexjs/stylex";
 
 export default function TvShowsPage() {
   return (
-    <Box sx={{ mt: 4 }}>
-      <Typography variant="h5">Contenido de TV Shows</Typography>
-      <Typography variant="body1" color="text.secondary">
-        ¡Aquí irán tus series favoritas de TMDB!
-      </Typography>
-    </Box>
+    <div {...stylex.props(styles.container)}>
+      <h2>Contenido de TV Shows</h2>
+      <div>¡Aquí irán tus series favoritas de TMDB!</div>
+    </div>
   );
 }
+
+const styles = stylex.create({
+  container: {
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+    flexGrow: 1,
+    gap: "1rem",
+    justifyContent: "center",
+  },
+});
