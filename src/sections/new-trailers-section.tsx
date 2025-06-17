@@ -3,6 +3,7 @@ import * as stylex from "@stylexjs/stylex";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
+import Alert from "@/components/alert";
 import CircularProgress from "@/components/circular-progress";
 import MovieCard from "@/components/movie-card";
 import Select from "@/components/select";
@@ -27,9 +28,7 @@ export default function NewTrailersSection({ style }: NewTrailersSectionProps) {
   if (isError) {
     return (
       <div {...stylex.props(styles.container)}>
-        <div {...stylex.props(styles.alert)}>
-          Error al cargar nuevos trailers: {error.message}
-        </div>
+        <Alert>Error al cargar nuevos trailers: {error.message}</Alert>
       </div>
     );
   }
@@ -113,15 +112,6 @@ const styles = stylex.create({
     flexDirection: "column",
     gap: "1rem",
     padding: "1rem",
-  },
-  alert: {
-    backgroundColor: "oklch(45% 40% 25deg)",
-    borderRadius: "0.5rem",
-    color: "oklch(100% 0% 0deg)",
-    fontWeight: "bold",
-    paddingBlock: "0.75rem",
-    paddingInline: "1rem",
-    textAlign: "center",
   },
   title: {
     fontSize: "1.25rem",
