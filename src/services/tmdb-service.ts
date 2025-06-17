@@ -37,18 +37,6 @@ export function getNewTrailers(page = 1): Promise<MovieListResponse> {
   return fetchTmdb("movie/now_playing", { page });
 }
 
-export function getMovieDetails(movieId: number) {
-  return fetchTmdb(`movie/${movieId.toString()}`);
-}
-
-export function getMovieVideos(movieId: number) {
-  return fetchTmdb(`movie/${movieId.toString()}/videos`);
-}
-
-export function getTrending(mediaType = "movie", timeWindow = "week") {
-  return fetchTmdb(`trending/${mediaType}/${timeWindow}`);
-}
-
 export function getMovieGenres(): Promise<MovieGenresResponse> {
   return fetchTmdb("genre/movie/list");
 }
