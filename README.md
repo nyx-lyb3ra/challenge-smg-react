@@ -61,6 +61,19 @@ Once the dependencies are installed, you can start the development server using:
 bun run dev
 ```
 
+## Environment Variables
+
+For the application to work properly, you need to set an environment variable
+with your TMDB API key. Create a file called `.env.local` in the root of the
+project and add the following line:
+
+```
+VITE_API_KEY=your_api_key_here
+```
+
+Be sure to replace `your_api_key_here` with your actual API key from The Movie
+DB.
+
 ## License
 
 This application is licensed under the [Blue Oak Model License](LICENSE.md).
