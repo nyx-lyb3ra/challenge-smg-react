@@ -3,15 +3,10 @@ import * as stylex from "@stylexjs/stylex";
 
 import PlayIcon from "@/icons/play-icon";
 import IconButton from "./icon-button";
+import type { Movie } from "@/services/tmdb-types";
 
 interface MovieCardProps {
-  movie: {
-    id?: number | null;
-    title?: string | null;
-    backdrop_path?: string | null;
-    release_date?: string | null;
-    vote_average?: number | null;
-  };
+  movie: Movie;
   showVoteAverage?: boolean;
   style?: StyleXStyles;
 }
