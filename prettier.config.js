@@ -2,4 +2,5 @@
 export default {
   editorconfig: true,
   quoteProps: "as-needed",
+  proseWrap: "always",
 };
