@@ -53,7 +53,7 @@ export default function FavoriteGenresSection({
 
       <button {...stylex.props(styles.addGenreButton)}>
         <AddIcon />
-        Add your favourite genres
+        <p>Add your favourite genres</p>
       </button>
     </div>
   );

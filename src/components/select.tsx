@@ -77,7 +77,7 @@ const styles = stylex.create({
     transitionDuration: "200ms",
     transitionProperty: "background-color",
     transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
-    width: "100%", // Asegura que el Select ocupe el ancho completo de su contenedor
+    width: "100%",
   },
   selectContent: {
     backdropFilter: "blur(30px)",

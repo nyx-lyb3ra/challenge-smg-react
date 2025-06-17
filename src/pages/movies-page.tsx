@@ -33,7 +33,10 @@ const styles = stylex.create({
     borderInlineEndColor: "oklch(100% 0% 0deg / 10%)",
     borderInlineEndStyle: "solid",
     borderInlineEndWidth: "1px",
-    display: "flex",
+    display: {
+      default: "none",
+      "@media (width >= 1200px)": "flex",
+    },
     flexBasis: "25%",
     flexDirection: "column",
     flexShrink: 0,

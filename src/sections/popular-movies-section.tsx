@@ -58,6 +58,10 @@ const styles = stylex.create({
     gap: "1rem",
   },
   gridItem: {
-    width: "calc(calc(100% - 2rem) / 3)",
+    width: {
+      default: "100%",
+      "@media (1200px > width >= 768px)": "calc(calc(100% - 1rem) / 2)",
+      "@media (width >= 1200px)": "calc(calc(100% - 2rem) / 3)",
+    },
   },
 });
