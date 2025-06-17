@@ -23,13 +23,7 @@ export default function NewTrailersSection({ style }: NewTrailersSectionProps) {
     },
   });
 
-  if (isLoading)
-    return (
-      <div {...stylex.props(styles.container)}>
-        <CircularProgress style={styles.spinner} />
-      </div>
-    );
-
+  if (isLoading) return <CircularProgress style={[styles.container, style]} />;
   if (isError) {
     return (
       <div {...stylex.props(styles.container)}>
@@ -119,9 +113,6 @@ const styles = stylex.create({
     flexDirection: "column",
     gap: "1rem",
     padding: "1rem",
-  },
-  spinner: {
-    flexGrow: 1,
   },
   alert: {
     backgroundColor: "oklch(45% 40% 25deg)",

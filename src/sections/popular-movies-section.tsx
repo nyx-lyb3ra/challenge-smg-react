@@ -14,14 +14,7 @@ export default function PopularMoviesSection() {
     },
   });
 
-  if (isLoading) {
-    return (
-      <div {...stylex.props(styles.container)}>
-        <CircularProgress style={styles.spinner} />
-      </div>
-    );
-  }
-
+  if (isLoading) return <CircularProgress style={[styles.container]} />;
   if (isError) {
     return (
       <div {...stylex.props(styles.container)}>
@@ -55,9 +48,6 @@ const styles = stylex.create({
     display: "flex",
     flexDirection: "column",
     gap: "1rem",
-  },
-  spinner: {
-    flexGrow: 1,
   },
   alert: {
     backgroundColor: "oklch(45% 40% 25deg)",
