@@ -26,6 +26,9 @@ const styles = stylex.create({
     gap: "0.25rem",
     height: "3rem",
     justifyContent: "center",
+    transitionDuration: "200ms",
+    transitionProperty: "background-color",
+    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
     width: "3rem",
   },
 });

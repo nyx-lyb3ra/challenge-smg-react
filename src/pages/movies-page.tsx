@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 
 import ContinueWatchingSection from "@/sections/continue-watching-section";
 import FavoriteGenresSection from "@/sections/favorite-genres-section";
+import FriendsWatchingSection from "@/sections/friends-watching-section";
 import NewTrailersSection from "@/sections/new-trailers-section";
 import PopularMoviesSection from "@/sections/popular-movies-section";
 
@@ -14,10 +15,7 @@ export default function MoviesPage() {
       </div>
 
       <div {...stylex.props(styles.mainContainer)}>
-        <div>
-          <div>+ 2 friends are watching</div>
-        </div>
-
+        <FriendsWatchingSection />
         <ContinueWatchingSection />
         <PopularMoviesSection />
       </div>
@@ -38,6 +36,7 @@ const styles = stylex.create({
     display: "flex",
     flexBasis: "25%",
     flexDirection: "column",
+    flexShrink: 0,
     overflowY: "hidden",
   },
   newTrailersSection: {

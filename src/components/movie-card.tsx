@@ -89,9 +89,6 @@ const styles = stylex.create({
       ":hover": "oklch(100% 0% 0deg / 20%)",
       ":active": "oklch(100% 0% 0deg / 30%)",
     },
-    transitionDuration: "200ms",
-    transitionProperty: "background-color",
-    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
   },
   cardContentTitle: {
     fontWeight: 700,
